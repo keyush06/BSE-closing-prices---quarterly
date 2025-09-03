@@ -1,0 +1,6 @@
+# playwright # --Do NOT pin playwright here when using the Playwright base image
+pandas
+beautifulsoup4
+lxml
+streamlit
+playwright==1.55.0

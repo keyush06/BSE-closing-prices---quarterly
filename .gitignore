@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+*.egg-info/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+# your specific venv path (from the screenshot)
+bse/bse/
+
+# Editors/OS
+.vscode/
+.DS_Store
+Thumbs.db
