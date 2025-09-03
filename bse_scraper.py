@@ -166,7 +166,8 @@ class Scraper_bse:
             # page.set_default_timeout(15000)
 
             ## Load the new page
-            page.goto(filled_url, wait_until="load")
+            # page.goto(filled_url, wait_until="load")
+            page.goto(filled_url, wait_until="domcontentloaded", timeout=120_000)
             # Let late scripts (Angular / ASP.NET) finish.
             try:
                 page.wait_for_load_state("networkidle", timeout=8000)
