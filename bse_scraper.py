@@ -9,6 +9,7 @@ from __future__ import annotations
 #         pass
 import re
 from datetime import datetime, date
+import sys
 from typing import List, Dict, Any
 import numpy as np, pandas as pd
 from io import StringIO
@@ -16,6 +17,9 @@ from io import StringIO
 ## for scraping
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeoutError
+
+## imported to check whether BSE is responding
+import urllib.request, sys
 
 
 class Scraper_bse:
@@ -144,6 +148,17 @@ class Scraper_bse:
         """
         filled_url = self.base_url.format(code = str(scrip_code).strip())
 
+        def _preflight(url):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent":
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"})
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    print("PREFLIGHT_STATUS", r.status, file=sys.stderr)
+                    return r.status
+            except Exception as e:
+                print("PREFLIGHT_FAIL", repr(e), file=sys.stderr)
+                return None
+
         if self.verbose:
             print(f"[INFO] Navigating: {filled_url}")
 
@@ -154,25 +169,83 @@ class Scraper_bse:
             if self.verbose:
                 print(f"[DEBUG] Saved {fname}")
 
-        ## using the playwright
+        ## using the playwright -- this is the old code
+        # with sync_playwright() as p:
+        #     browser = p.chromium.launch(headless=self.headless)
+        #     context = browser.new_context(user_agent=(
+        #         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        #         "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+        #     ))
+        #     page = context.new_page()
+
+        #     # page.set_default_timeout(15000)
+
+        #     ## Load the new page
+        #     # page.goto(filled_url, wait_until="load")
+        #     page.goto(filled_url, wait_until="domcontentloaded", timeout=120_000)
+        #     # Let late scripts (Angular / ASP.NET) finish.
+        #     try:
+        #         page.wait_for_load_state("networkidle", timeout=8000)
+        #     except Exception:
+        #         pass -- old code till here
+
+
+        ## updated new code with better error handling
+        """The browser is being launched with additional arguments to enhance stability and compatibility, especially in containerized or restricted environments."""
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=self.headless)
-            context = browser.new_context(user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
-            ))
-            page = context.new_page()
+            browser = p.chromium.launch(
+                headless=self.headless,
+                args = [
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--disable-gpu"
+                ]
+            )
 
-            # page.set_default_timeout(15000)
-
-            ## Load the new page
-            # page.goto(filled_url, wait_until="load")
-            page.goto(filled_url, wait_until="domcontentloaded", timeout=120_000)
-            # Let late scripts (Angular / ASP.NET) finish.
             try:
-                page.wait_for_load_state("networkidle", timeout=8000)
-            except Exception:
-                pass
+                context = browser.new_context(user_agent=(
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+                ))
+                page = context.new_page()
+
+                # raise navigation timeout so we can see network/blocking issues in logs
+                page.set_default_navigation_timeout(180_000)
+                page.set_default_timeout(180_000)
+
+                print("[INFO] Performing preflight check...")
+                _preflight(filled_url)
+
+                try:
+                    page.goto(filled_url, wait_until="domcontentloaded")
+                except PWTimeoutError:
+
+                    ## now we have the logs to see what is happening when deployed
+                    try:
+                        html = page.content()
+                        with open("Debug_timeout_goto.html", "w", encoding="utf-8") as f:
+                            f.write(html)
+
+                    except Exception:
+                        pass
+
+                    try:
+                        page.screenshot(path = "/tmp/Debug_timeout_goto.png")
+                    except Exception:
+                        pass
+
+                    browser.close()
+                    raise RuntimeError(f"Timed out loading BSE page for scrip code {scrip_code}. Saved Debug_timeout_goto.html")
+                
+                ## allow background activity
+                try:
+                    page.wait_for_load_state("networkidle", timeout=10_000)
+                except Exception:
+                    pass
+
+            except Exception as e:
+                pass          
 
             dump("initial", page.content())
 
