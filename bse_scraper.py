@@ -429,6 +429,25 @@ class Scraper_bse:
 
             dump("after_submit", page.content())
 
+            # Print a short page head to cloud logs so you can inspect remotely
+            try:
+                head = page.content()[:2000]
+                print("[DEBUG][after_submit] page head:\n", head)
+            except Exception:
+                pass
+
+            table_html = None
+
+            # Primary: wait for a table containing "Month" (longer timeout for cloud)
+            try:
+                sel = page.wait_for_selector("table:has-text('Month')", timeout=60_000)
+                if sel:
+                    table_html = sel.evaluate("el => el.outerHTML")
+            except PWTimeoutError:
+                pass
+            except Exception:
+                pass
+
             def find_table_html() -> str | None:
                 patterns = [re.compile(r"Month", re.I), re.compile(r"Close", re.I)]
                 # Search every frame
@@ -455,6 +474,11 @@ class Scraper_bse:
 
             if not table_html:
                 dump("no_table_final", page.content())
+                try:
+                    full = page.content() ## saving so that I can see on logs
+                    print("[DEBUG] Saved final page content for debugging.")
+                except Exception as e:
+                    print("[ERROR] Failed to save final page content:", e)
                 browser.close()
                 raise RuntimeError("Monthly data table not found (even after submit & frame scan). See debug_stage_* files.")
 
