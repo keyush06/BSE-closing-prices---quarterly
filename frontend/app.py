@@ -36,13 +36,19 @@ if st.button("Get Prices"):
         with st.spinner("Fetching from BSE..."):
             try:
                 df = s._get_qtrly_dates(scrip_code, from_year=int(from_year))
-                if df.empty:
+                st.write("DEBUG: returned", "shape:", getattr(df, "shape", None))
+
+                if df is None:
+                    st.error("Scraper returned None (check _get_qtrly_dates returns a DataFrame)")
+
+                elif isinstance(df, pd.DataFrame) and df.empty:
                     st.warning("No quarter-end data found. Check the scrip code or try another.")
+                
                 else:
                     # pretty display
                     show = df.copy()
                     show["Quarter End"] = show["Quarter End"].astype(str)
-                    st.dataframe(show, use_container_width=True)
+                    st.dataframe(show, width="stretch")
                     st.download_button(
                         "Download CSV",
                         data=show.to_csv(index=False).encode(),
