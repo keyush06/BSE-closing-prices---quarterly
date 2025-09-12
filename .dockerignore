@@ -1,0 +1,15 @@
+bse/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+.git/
+.gitignore
+.DS_Store
+*.csv
+node_modules/
+.dist/
+build/
+pip-wheel-metadata/
