@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="MobileOptimized" content="width"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=EmulateIE8, IE=EmulateIE9, IE=EmulateIE10, IE=EmulateIE11"/>
+        <title>Stock Prices
+</title>
+        <meta name="description" content="Archives of Daily / Monthly Reports (EQ), Historical Data: Get the latest information about Archives of Daily / Monthly Reports (EQ), Historical Data and more! Click here to stay updated and invest wisely! Learn more about Archives of Daily / Monthly Reports (EQ), Historical Data Today, visit at bseindia.com"/>
+        <meta name="Keywords" content="Historical Prices, Equity Historical Prices, MF Historical Prices, Debt Historical Prices, historical Data, Daily historical prices, monthly historical prices, yearly historical prices, historical prices at BSE, BSE India"/>
+        <script>
+            var a = new Date();
+            var mon = a.getMonth();
+            mon = mon + 1;
+            var time = a.getDate() + "" + mon + "" + a.getFullYear() + "" + a.getHours() + "" + a.getMinutes();
+            document.write("<script type='text/javascript' src='/version.js?v=" + time + "'><\/script>");
+        </script>
+        <link href="/include/css/bootstrap.css?v=1" type="text/css" rel="stylesheet"/>
+        <link href="/include/css/style.css" type="text/css" rel="stylesheet"/>
+        <link href="/include/css/font-awesome.css" type="text/css" rel="stylesheet"/>
+        <script src="/include/js/jquerylatest.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://www.bseindia.com/include/js/google_mid.js"></script>
+        <script src="/include/js/jqueryuilatest.js"></script>
+        <link href="/include/css/jquery-ui-Latest.min.css" rel="stylesheet"/>
+        <script src="/include/js/smartNewSearchPrimary.js" type="text/javascript"></script>
+        <script src="/include/js/Eqautocomplete_sv1.js"></script>
+        <script>
+            //$(document).ready(function () {
+            window.onload = function() {
+                $('a[href*="bseindia"]').each(function() {
+                    var oldUrl = $(this).attr("href");
+                    // Get current url
+                    var newUrl = oldUrl.replace("http://www.bseindia.com", "").replace("https://www.bseindia.com", "").replace("http://beta.bseindia.com", "").replace("https://beta.bseindia.com", "");
+                    // Create new url
+                    $(this).attr("href", newUrl);
+                    // Set herf value
+                });
+            }
+            //);
+        </script>
+        <script>
+            function dprint() {
+                window.print();
+            }
+        </script>
+    </head>
+    <body>
+        <form method="post" action="./StockPrcHistori.aspx?expandable=7&amp;scripcode=500325&amp;flag=sp&amp;Submit=G" id="form1">
+            <div class="aspNetHidden">
+                <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""/>
+                <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""/>
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"/>
+            </div>
+            <script type="text/javascript">
+                //<![CDATA[
+                var theForm = document.forms['form1'];
+                if (!theForm) {
+                    theForm = document.form1;
+                }
+                function __doPostBack(eventTarget, eventArgument) {
+                    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                        theForm.__EVENTTARGET.value = eventTarget;
+                        theForm.__EVENTARGUMENT.value = eventArgument;
+                        theForm.submit();
+                    }
+                }
+                //]]>
+            </script>
+            <div class="aspNetHidden">
+                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EC4662D7"/>
+                <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value=""/>
+                <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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"/>
+            </div>
+            <script src="/D90/Angular/angular.latest.js"></script>
+            <script src="/D90/Angular/angular-sanitize.latest.js"></script>
+            <link href="https://bnotification.bseindia.com/" rel="preconnect">
+            <script src="https://bnotification.bseindia.com/socket.io/socket.io.js"></script>
+            <script>
+                var a = new Date();
+                var mon = a.getMonth();
+                var mint = 30;
+                mon = mon + 1;
+                if (a.getMinutes() % 30 == 0) {
+                    mint = a.getMinutes();
+                }
+                var time = a.getDate() + "" + mon + "" + a.getFullYear() + "" + a.getHours() + "" + mint;
+                document.write("<script type='text/javascript' src='/version.js?v=" + time + "'><\/script>");
+            </script>
+            <script>
+                document.write("<script type='text/javascript' src='/D90/Controller/AppnewController.js?v=" + version_cntroller + "'><\/script>");
+                document.write("<script type='text/javascript' src='/D90/Controller/factoryother.js?v=" + version_cntroller + "'><\/script>");
+                document.write("<script type='text/javascript' src='/D90/Controller/Headernew_streamController.js?v=" + version_cntroller + "'><\/script>");
+            </script>
+            <div ng-app="topHeader" ng-controller="topController">
+                <div id="topDiv" ng-include="'/D90/Header/top_new.html'"></div>
+                <div id="Divhomemenu" ng-include="'/D90/Header/menu.html'"></div>
+            </div>
+            <div style="margin-top: 10px;">
+                <div id="fontSize">
+                    <div id="divmain" class="body slide">
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnCode" id="ContentPlaceHolder1_hdnCode" value="500325"/>
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$DDate" id="ContentPlaceHolder1_DDate"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidDMY" type="hidden" id="ContentPlaceHolder1_hidDMY" value="M"/>
+                        <input name="ctl00$ContentPlaceHolder1$hdflag" type="hidden" id="ContentPlaceHolder1_hdflag" value="0"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidCurrentDate" type="hidden" id="ContentPlaceHolder1_hidCurrentDate" value="12-09-2025 00:00:00"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidYear" type="hidden" id="ContentPlaceHolder1_hidYear" value="2024"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidFromDate" type="hidden" id="ContentPlaceHolder1_hidFromDate" value="01/03/2024"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidToDate" type="hidden" id="ContentPlaceHolder1_hidToDate" value="12/09/2025"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidOldDMY" type="hidden" id="ContentPlaceHolder1_hidOldDMY"/>
+                        <input name="ctl00$ContentPlaceHolder1$hiddenScripCode" type="hidden" id="ContentPlaceHolder1_hiddenScripCode" value="500325"/>
+                        <input name="ctl00$ContentPlaceHolder1$hidCompanyVal" type="hidden" id="ContentPlaceHolder1_hidCompanyVal" value="RELIANCE"/>
+                        <div style="margin-top: 10px;">
+                            <div id="divmain" class="body">
+                                <!--	For Google AD-->
+                                <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                                <script>
+                                    window.googletag = window.googletag || {
+                                        cmd: []
+                                    };
+                                    googletag.cmd.push(function() {
+                                        googletag.defineSlot('/35735749/ETF_MutualFunds', [[300, 100], [970, 90], [728, 90], [234, 60]], 'div-gpt-ad-1586924041721-0').addService(googletag.pubads());
+                                        googletag.pubads().enableSingleRequest();
+                                        googletag.enableServices();
+                                    });
+                                </script>
+                                <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                                <script>
+                                    window.googletag = window.googletag || {
+                                        cmd: []
+                                    };
+                                    googletag.cmd.push(function() {
+                                        googletag.defineSlot('/35735749/Equity_Second', [[970, 90], [234, 60], [728, 90], [300, 100]], 'div-gpt-ad-1586264221225-0').addService(googletag.pubads());
+                                        googletag.pubads().enableSingleRequest();
+                                        googletag.enableServices();
+                                    });
+                                </script>
+                                <!--	Google AD-->
+                                <br>
+                                <div align="center" class="largetable">
+                                    <!-- /35735749/ETF_MutualFunds -->
+                                    <div id='div-gpt-ad-1586924041721-0'>
+                                        <script>
+                                            googletag.cmd.push(function() {
+                                                googletag.display('div-gpt-ad-1586924041721-0');
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="whitebox">
+                                    <div class="container-fluid marketstartarea">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <div class=" blueheading" style="text-align: left">
+                                                    <div class="home_widget">
+                                                        <span id="ContentPlaceHolder1_lblMainHead" class="page_info_title_s2">Stock Prices</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 text-right">
+                                                <span class="blackbredcrumb">
+                                                    <a onclick="return onbtnSubmit_Click() ;" id="ContentPlaceHolder1_btnDownload" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnDownload&#39;,&#39;&#39;)">
+                                                        <i class="fa fa-download iconfont"></i>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="activatebcrumb"></span>
+                                        <!--bcandshararea -->
+                                        <!--headingdatearea -->
+                                        <div class="headingdatearea">
+                                            <div class="headingdiv"></div>
+                                            <div class="contentdatearea">
+                                                <span class="datetext"></span>
+                                            </div>
+                                        </div>
+                                        <!--headingdatearea -->
+                                    </div>
+                                </div>
+                                <div class="container-fluid whitebox marketstartarea">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <table id="DMY" cellpadding="0px" cellspacing="0px" width="100%">
+                                                <tr>
+                                                    <td align="center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div id="ContentPlaceHolder1_divStock" style="display:;">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="col-lg-1">
+                                                                        <b>Settlement Type</b>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <select name="ctl00$ContentPlaceHolder1$ddlsetllementcal" id="ContentPlaceHolder1_ddlsetllementcal" class="form-control" role="DropDownList" name="settlement" onchange="check()">
+                                                                            <option selected="selected" value="0">Equity T + 1</option>
+                                                                            <option value="1">Equity T + 0</option>
+                                                                            <option value="2">MF/ETFs</option>
+                                                                            <option value="3">Debt/Others</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br/>
+                                                            <div class="row">
+                                                                <div class="col-lg-12" bgcolor="#ffffff">
+                                                                    <div class="row">
+                                                                        <div class=" col-lg-1">
+                                                                            <b>Search</b>
+                                                                        </div>
+                                                                        <div class="col-lg-3">
+                                                                            <div id="ContentPlaceHolder1_Pnl1" onkeypress="return noenterw(event);">
+                                                                                <input name="ctl00$ContentPlaceHolder1$Hidden1" type="hidden" id="ContentPlaceHolder1_Hidden1"/>
+                                                                                <table width="100%">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div class="search">
+                                                                                                <div id="smartSearchdiv" style="float: left; width: 100%" onblur="ClearList();">
+                                                                                                    <input name="ctl00$ContentPlaceHolder1$smartSearch" type="text" value="RELIANCE" maxlength="50" id="ContentPlaceHolder1_smartSearch" class="textbox2" placeholder="Enter Security Name / Code / ID"/>
+                                                                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$scripname" id="ContentPlaceHolder1_scripname" value="Reliance Industries Ltd"/>
+                                                                                                    <div id="ajax_response_smart"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div id="ContentPlaceHolder1_Panel3" onkeypress="return noenterw3(event);">
+                                                                                <input name="ctl00$ContentPlaceHolder1$Hidden4" type="hidden" id="ContentPlaceHolder1_Hidden4" value="RELIANCE"/>
+                                                                                <table width="100%">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div class="search">
+                                                                                                <div id="smartSearchdiv_TO" style="float: left; width: 100%" onblur="ClearList();">
+                                                                                                    <input name="ctl00$ContentPlaceHolder1$smartSearch_TO" type="text" value="RELIANCE" maxlength="100" id="ContentPlaceHolder1_smartSearch_TO" class="textbox2" placeholder="Enter Security Name / Code / ID"/>
+                                                                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$scriptnameTO" id="ContentPlaceHolder1_scriptnameTO" value="Reliance Industries Ltd"/>
+                                                                                                    <div id="ajax_response_smart_TO"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div id="ContentPlaceHolder1_Panel1" onkeypress="return noenterw1(event);">
+                                                                                <input name="ctl00$ContentPlaceHolder1$Hidden2" type="hidden" id="ContentPlaceHolder1_Hidden2" value="RELIANCE"/>
+                                                                                <table width="100%">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div class="search">
+                                                                                                <div id="smartSearchdiv_mf" style="float: left; width: 100%" onblur="ClearList();">
+                                                                                                    <input name="ctl00$ContentPlaceHolder1$smartSearch_mf" type="text" value="RELIANCE" maxlength="100" id="ContentPlaceHolder1_smartSearch_mf" class="textbox2" placeholder="Enter Security Name / Code / ID"/>
+                                                                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$scriptnamemf" id="ContentPlaceHolder1_scriptnamemf" value="Reliance Industries Ltd"/>
+                                                                                                    <div id="ajax_response_smart_mf"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div id="ContentPlaceHolder1_Panel2" onkeypress="return noenterw2(event);">
+                                                                                <input name="ctl00$ContentPlaceHolder1$Hidden3" type="hidden" id="ContentPlaceHolder1_Hidden3" value="RELIANCE"/>
+                                                                                <table width="100%">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div class="search">
+                                                                                                <div id="smartSearchdiv_Debt" style="float: left; width: 100%" onblur="ClearList();">
+                                                                                                    <input name="ctl00$ContentPlaceHolder1$smartSearch_Debt" type="text" value="RELIANCE" maxlength="100" id="ContentPlaceHolder1_smartSearch_Debt" class="textbox2" placeholder="Enter Security Name / Code / ID"/>
+                                                                                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$ScriptnameDebt" id="ContentPlaceHolder1_ScriptnameDebt" value="Reliance Industries Ltd"/>
+                                                                                                    <div id="ajax_response_smart_Debt"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="ContentPlaceHolder1_tdP" style="display: " class="TTRow_left">
+                                                        <b>Period:</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="TTRow" align="center">
+                                                        <table>
+                                                            <tr>
+                                                                <td bgcolor="#d6d6d6" align="center">
+                                                                    <div id="ContentPlaceHolder1_divDMY" style="display:;">
+                                                                        <table border="0" cellpadding="4px" cellspacing="1px">
+                                                                            <tr>
+                                                                                <td align="left" class="TTHeadedefault">
+                                                                                    <input id="ContentPlaceHolder1_rdbDaily" type="radio" name="ctl00$ContentPlaceHolder1$DMY" value="rdbDaily" onclick="ChangeDMYVal(&#39;D&#39;);"/>
+                                                                                    <label for="ContentPlaceHolder1_rdbDaily">Daily</label>
+                                                                                </td>
+                                                                                <td bgcolor="#ffffff" align="left">
+                                                                                    From :&nbsp;&nbsp;<input name="ctl00$ContentPlaceHolder1$txtFromDate" type="text" id="ContentPlaceHolder1_txtFromDate" disabled="disabled" class="aspNetDisabled form-control" autocomplete="off" onkeypress="return false;" onpaste="return false;"/>
+                                                                                    <div id="ContentPlaceHolder1_divMFdate" style="z-index: 99999;"></div>
+                                                                                </td>
+                                                                                <td align="left" class="TTRow">
+                                                                                    To :&nbsp;&nbsp;<input name="ctl00$ContentPlaceHolder1$txtToDate" type="text" id="ContentPlaceHolder1_txtToDate" disabled="disabled" class="aspNetDisabled form-control" autocomplete="off" onkeypress="return false;" onpaste="return false;"/>
+                                                                                    <div id="ContentPlaceHolder1_DivDate1" style="z-index: 99999;"></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="left" class="TTHeadedefault">
+                                                                                    <input id="ContentPlaceHolder1_rdbMonthly" type="radio" name="ctl00$ContentPlaceHolder1$DMY" value="rdbMonthly" checked="checked" onclick="ChangeDMYVal(&#39;M&#39;);"/>
+                                                                                    <label for="ContentPlaceHolder1_rdbMonthly">Monthly</label>
+                                                                                </td>
+                                                                                <td align="left" class='TTRow_left' colspan='2'>
+                                                                                    From :&nbsp;&nbsp
+                                                                                    <select name="ctl00$ContentPlaceHolder1$cmbMonthly" id="ContentPlaceHolder1_cmbMonthly" class="form-control">
+                                                                                        <option value="0">MMM</option>
+                                                                                        <option value="01">Jan</option>
+                                                                                        <option value="02">Feb</option>
+                                                                                        <option selected="selected" value="03">Mar</option>
+                                                                                        <option value="04">Apr</option>
+                                                                                        <option value="05">May</option>
+                                                                                        <option value="06">Jun</option>
+                                                                                        <option value="07">Jul</option>
+                                                                                        <option value="08">Aug</option>
+                                                                                        <option value="09">Sep</option>
+                                                                                        <option value="10">Oct</option>
+                                                                                        <option value="11">Nov</option>
+                                                                                        <option value="12">Dec</option>
+                                                                                    </select>
+                                                                                    &nbsp;&nbsp;&nbsp;
+                                                                                    <select name="ctl00$ContentPlaceHolder1$cmbMYear" id="ContentPlaceHolder1_cmbMYear" class="form-control" onChange="onChange()">
+                                                                                        <option value="YYYY">YYYY</option>
+                                                                                        <option value="2025">2025</option>
+                                                                                        <option selected="selected" value="2024">2024</option>
+                                                                                        <option value="2023">2023</option>
+                                                                                        <option value="2022">2022</option>
+                                                                                        <option value="2021">2021</option>
+                                                                                        <option value="2020">2020</option>
+                                                                                        <option value="2019">2019</option>
+                                                                                        <option value="2018">2018</option>
+                                                                                        <option value="2017">2017</option>
+                                                                                        <option value="2016">2016</option>
+                                                                                        <option value="2015">2015</option>
+                                                                                        <option value="2014">2014</option>
+                                                                                        <option value="2013">2013</option>
+                                                                                        <option value="2012">2012</option>
+                                                                                        <option value="2011">2011</option>
+                                                                                        <option value="2010">2010</option>
+                                                                                        <option value="2009">2009</option>
+                                                                                        <option value="2008">2008</option>
+                                                                                        <option value="2007">2007</option>
+                                                                                        <option value="2006">2006</option>
+                                                                                        <option value="2005">2005</option>
+                                                                                        <option value="2004">2004</option>
+                                                                                        <option value="2003">2003</option>
+                                                                                        <option value="2002">2002</option>
+                                                                                        <option value="2001">2001</option>
+                                                                                        <option value="2000">2000</option>
+                                                                                        <option value="1999">1999</option>
+                                                                                        <option value="1998">1998</option>
+                                                                                        <option value="1997">1997</option>
+                                                                                        <option value="1996">1996</option>
+                                                                                        <option value="1995">1995</option>
+                                                                                        <option value="1994">1994</option>
+                                                                                        <option value="1993">1993</option>
+                                                                                        <option value="1992">1992</option>
+                                                                                        <option value="1991">1991</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="left" class="TTHeadedefault">
+                                                                                    <input id="ContentPlaceHolder1_rdbYearly" type="radio" name="ctl00$ContentPlaceHolder1$DMY" value="rdbYearly" onclick="ChangeDMYVal(&#39;Y&#39;);"/>
+                                                                                    <label for="ContentPlaceHolder1_rdbYearly">Yearly</label>
+                                                                                </td>
+                                                                                <td align="left" class="TTRow">
+                                                                                    From :&nbsp;&nbsp
+                                                                                    <select name="ctl00$ContentPlaceHolder1$cmbYearly" id="ContentPlaceHolder1_cmbYearly" disabled="disabled" class="aspNetDisabled form-control" onChange="onChangeYearly()">
+                                                                                        <option selected="selected" value="YYYY">YYYY</option>
+                                                                                        <option value="2025">2025</option>
+                                                                                        <option value="2024">2024</option>
+                                                                                        <option value="2023">2023</option>
+                                                                                        <option value="2022">2022</option>
+                                                                                        <option value="2021">2021</option>
+                                                                                        <option value="2020">2020</option>
+                                                                                        <option value="2019">2019</option>
+                                                                                        <option value="2018">2018</option>
+                                                                                        <option value="2017">2017</option>
+                                                                                        <option value="2016">2016</option>
+                                                                                        <option value="2015">2015</option>
+                                                                                        <option value="2014">2014</option>
+                                                                                        <option value="2013">2013</option>
+                                                                                        <option value="2012">2012</option>
+                                                                                        <option value="2011">2011</option>
+                                                                                        <option value="2010">2010</option>
+                                                                                        <option value="2009">2009</option>
+                                                                                        <option value="2008">2008</option>
+                                                                                        <option value="2007">2007</option>
+                                                                                        <option value="2006">2006</option>
+                                                                                        <option value="2005">2005</option>
+                                                                                        <option value="2004">2004</option>
+                                                                                        <option value="2003">2003</option>
+                                                                                        <option value="2002">2002</option>
+                                                                                        <option value="2001">2001</option>
+                                                                                        <option value="2000">2000</option>
+                                                                                        <option value="1999">1999</option>
+                                                                                        <option value="1998">1998</option>
+                                                                                        <option value="1997">1997</option>
+                                                                                        <option value="1996">1996</option>
+                                                                                        <option value="1995">1995</option>
+                                                                                        <option value="1994">1994</option>
+                                                                                        <option value="1993">1993</option>
+                                                                                        <option value="1992">1992</option>
+                                                                                        <option value="1991">1991</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td class="TTRow"></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center" class="TTRow" colspan='3'>
+                                                                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Submit" onclick="return onbtnSubmit_Click();return onbtnSubmit_Click();" id="ContentPlaceHolder1_btnSubmit" class="btn btn-default"/>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid whitebox marketstartarea">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div id="ContentPlaceHolder1_divStockData" style="display:;">
+                                                <div class="row">
+                                                    <div class="col-lg-12 TTRow_left">
+                                                        <div id="divCompany" style="font-weight: bold">
+                                                            <b>Company :</b>
+                                                            <span id="ContentPlaceHolder1_lblCompanyValue">
+                                                                <a target='_blank' Class='tablebluelink' href='https://www.bseindia.com/stock-share-price/reliance-industries-ltd/reliance/500325/'>Reliance Industries Ltd</a>
+                                                            </span>
+                                                            <span id="ContentPlaceHolder1_lblScripCodeValue">500325</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 largetable">
+                                                        <table cellspacing='0' cellpadding='0' style="width: 100%">
+                                                            <tr>
+                                                                <td align="left" width="100%">
+                                                                    <span id="ContentPlaceHolder1_Label1" style="font-weight:bold;">Period:</span>
+                                                                    <span id="ContentPlaceHolder1_lblPeriodFrom">Mar 2024</span>
+                                                                    &nbsp;to &nbsp;<span id="ContentPlaceHolder1_lblPeriodTo">Sep 2025</span>
+                                                                </td>
+                                                                <td align="right" width="100%">
+                                                                    <span id="ContentPlaceHolder1_spnScripID"></span>
+                                                                </td>
+                                                                <td align="right">
+                                                                    <span id="ContentPlaceHolder1_spnNoOfRecord" style="display:none;">
+                                                                        <span id="ContentPlaceHolder1_spnRecordText"></span>
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12" align="right">All Prices in ₹</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 largetable">
+                                                        <table width="100%" cellpadding="4" cellspacing="1">
+                                                            <tr>
+                                                                <td bgcolor="#d6d6d6">
+                                                                    <div id="ContentPlaceHolder1_divStkData" style="Height:300px;background-color:#F5F5F5;">
+                                                                        <div id="ContentPlaceHolder1_spnError" style="position:relative;top:50%;text-align:center;display:none;">
+                                                                            <b>
+                                                                                <font color='Red'>Scrip Code is not in Proper Format. </font>
+                                                                            </b>
+                                                                        </div>
+                                                                        <span id="ContentPlaceHolder1_spnStkData">
+                                                                            <table width='100%' border='0' cellpadding='4' cellspacing='1'>
+                                                                                <tr>
+                                                                                    <td width='70px' class='innertable_header1' rowspan='2'>Month</td>
+                                                                                    <td width='70px' class='innertable_header1' rowspan='2'>Open</td>
+                                                                                    <td width='70px' class='innertable_header1' rowspan='2'>High</td>
+                                                                                    <td width='70px' class='innertable_header1' rowspan='2'>Low</td>
+                                                                                    <td width='70px' class='innertable_header1' rowspan='2'>Close</td>
+                                                                                    <td width='85px' class='innertable_header1' rowspan='2'>
+                                                                                        No. of <br/>Shares
+                                                                                    </td>
+                                                                                    <td width='75px' class='innertable_header1' rowspan='2'>
+                                                                                        No. of <br/>Trades
+                                                                                    </td>
+                                                                                    <td width='120px' class='innertable_header1' rowspan='2'>Total Turnover</td>
+                                                                                    <td width='125px' class='innertable_header1' rowspan='2'>Deliverable Quantity</td>
+                                                                                    <td width='125px' class='innertable_header1' rowspan='2'>% Deli. Qty to Traded Qty </td>
+                                                                                    <td width='160px' class='innertable_header1' rowspan='1' colspan='2'>* Spread</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width='70px' class='innertable_header1'>H-L</td>
+                                                                                    <td width='70px' class='innertable_header1'>C-O</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Mar 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,916.70</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,024.80</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,826.90</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,976.80</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>50,44,754</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>2,71,251</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>14,76,69,99,095</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>22,82,411</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>45.24</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>197.90</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>60.10</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Apr 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,985.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,988.50</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,885.20</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,931.15</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>48,60,298</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>2,75,250</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>14,28,12,52,807</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>19,69,138</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>40.51</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>103.30</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-53.85</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>May 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,945.35</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,983.55</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,768.05</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,859.60</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>44,28,907</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>3,07,484</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>12,71,64,92,301</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>17,00,456</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>38.39</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>215.50</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-85.75</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Jun 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,974.90</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,161.45</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,719.15</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,131.85</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>69,29,082</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,49,946</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>20,44,27,92,412</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>26,21,594</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>37.83</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>442.30</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>156.95</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Jul 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,129.95</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,217.90</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,927.10</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,010.25</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>53,56,811</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>3,19,540</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>16,64,17,28,883</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>16,10,497</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>30.06</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>290.80</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-119.70</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Aug 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,023.80</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,083.95</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,865.80</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,019.75</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>68,91,108</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>2,98,118</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>20,48,01,17,379</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>33,87,118</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>49.15</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>218.15</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-4.05</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Sep 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,031.65</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>3,066.90</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,892.30</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,953.80</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>72,00,927</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,27,325</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>21,38,24,22,961</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>31,08,291</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>43.17</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>174.60</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-77.85</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Oct 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,962.70</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>2,978.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,320.50</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,332.60</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,37,11,168</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>6,85,064</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>35,59,19,36,326</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>84,11,239</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>61.35</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>1,657.50</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-1,630.10</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Nov 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,339.85</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,341.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,217.70</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,292.45</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,24,94,702</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>5,47,383</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>16,01,20,19,828</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>61,74,638</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>49.42</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>123.30</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-47.40</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Dec 24</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,291.65</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,329.50</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,202.10</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,215.45</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,44,07,381</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,94,768</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>18,04,04,99,119</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>93,31,489</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>64.77</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>127.40</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-76.20</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Jan 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,218.95</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,325.10</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,212.10</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,264.90</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,45,21,182</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,80,392</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>18,28,65,64,800</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>77,88,467</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>53.64</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>113.00</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>45.95</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Feb 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,265.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,290.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,193.30</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,199.60</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>79,89,537</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>2,54,992</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>9,85,50,77,587</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>43,36,074</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>54.27</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>96.70</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-65.40</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Mar 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,209.80</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,307.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,156.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,275.00</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,09,89,751</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>3,11,603</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>13,72,77,87,760</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>68,47,047</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>62.30</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>151.00</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>65.20</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Apr 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,274.60</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,411.85</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,115.55</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,408.35</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>2,20,59,754</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,80,494</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>29,10,09,63,863</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>1,50,51,240</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>68.23</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>296.30</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>133.75</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>May 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,408.40</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,461.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,372.05</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,420.80</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,35,70,207</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>3,26,385</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>19,30,78,01,886</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>73,67,299</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>54.29</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>88.95</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>12.40</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Jun 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,415.95</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,524.95</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,395.90</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,500.65</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,63,24,922</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>3,19,508</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>23,56,75,56,917</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>47,80,527</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>29.28</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>129.05</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>84.70</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Jul 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,500.65</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,551.00</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,383.50</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,390.30</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,72,44,441</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,49,791</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>25,41,17,48,339</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>73,56,759</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>42.66</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>167.50</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-110.35</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Aug 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,387.95</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,431.80</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,350.30</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,357.05</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>1,31,36,907</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>4,44,374</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>18,33,12,49,264</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>61,67,190</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>46.95</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>81.50</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>-30.90</td>
+                                                                                </tr>
+                                                                                <tr class='TTRow'>
+                                                                                    <td class='TTRow_left10' width='70px'>Sep 25</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,357.85</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,388.65</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,341.70</td>
+                                                                                    <td width='70px' class='tdcolumn text-right'>1,383.50</td>
+                                                                                    <td width='85px' class='tdcolumn text-right'>41,48,337</td>
+                                                                                    <td width='75px' class='tdcolumn text-right'>1,50,067</td>
+                                                                                    <td width='120px' class='tdcolumn text-right'>5,69,41,79,340</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>13,96,769</td>
+                                                                                    <td width='45px' class='tdcolumn text-right'>33.67</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>46.95</td>
+                                                                                    <td width='50px' class='tdcolumn text-right'>25.65</td>
+                                                                                </tr>
+                                                                            </table>
+                                                                            <span id='spnSpread' class='spnSpread'>
+                                                                                * Spread <br/>
+                                                                                H-L : High-Low <br/>C-O : Close-Open</br>
+                                                                            </span>
+                                                                        </span>
+                                                                        <div id="divNoRecord" style="position: relative; top: 50%; text-align: center;"></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div id="ContentPlaceHolder1_trNote" class="col-lg-12">
+                                                        <div>
+                                                            Note: Kindly download the csv file to view all records. 
+                                                            <span class="blackbredcrumb">
+                                                                <a onclick="return onbtnSubmit_Click();" id="ContentPlaceHolder1_btnDownload1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnDownload1&#39;,&#39;&#39;)">
+                                                                    <i class="fa fa-download iconfont"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="ContentPlaceHolder1_divCTData" style="display:none;">
+                                                <div class="row">
+                                                    <div align="left" class="col-lg-12 TTRow_left">
+                                                        <span id="ContentPlaceHolder1_Label2" style="font-weight:bold;">Period:</span>
+                                                        <span id="ContentPlaceHolder1_lblFrom"></span>
+                                                        &nbsp;to &nbsp;<span id="ContentPlaceHolder1_lblTo"></span>
+                                                    </div>
+                                                    <div align="right" width="300px">
+                                                        <span id="ContentPlaceHolder1_spnDwnRec"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <td colspan="2" align="right">All Prices in ₹</td>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 largetable" style="width: auto; height: auto;">
+                                                        <table width="100%" cellpadding="4" cellspacing="1">
+                                                            <tr>
+                                                                <td bgcolor="#d6d6d6">
+                                                                    <div id="ContentPlaceHolder1_divRecord">
+                                                                        <span id="ContentPlaceHolder1_spnRecord"></span>
+                                                                        <div id="ContentPlaceHolder1_divErr" style="position: relative; top: 40%; text-align: center;">
+                                                                            <span id="ContentPlaceHolder1_spnErrorR"></span>
+                                                                            <span id="ContentPlaceHolder1_spnNoRecord"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="/include/js/smartSearch_EQ.js"></script>
+                        <script src="/include/js/smartSearch_TO.js"></script>
+                        <script src="/include/js/smartSearch_MFETF.js"></script>
+                        <script src="/include/js/smartSearch_Debt.js"></script>
+                        <script>
+                            $(function() {
+                                $("#ContentPlaceHolder1_txtFromDate").datepicker({
+                                    changeMonth: true,
+                                    changeYear: true,
+                                    dateFormat: "dd/mm/yy",
+                                    //showOn: "both",
+                                    //buttonImage: "/include/images/calender01.gif",
+                                    //buttonImageOnly: true,
+                                    //buttonText: "Select date",
+                                    maxDate: Date.now.toString()
+                                });
+                                //$("#txtToDt").datepicker("setDate", Date.now.toString());
+                            });
+                            $(function() {
+                                $("#ContentPlaceHolder1_txtToDate").datepicker({
+                                    changeMonth: true,
+                                    changeYear: true,
+                                    dateFormat: "dd/mm/yy",
+                                    //showOn: "both",
+                                    //buttonImage: "/include/images/calender01.gif",
+                                    //buttonImageOnly: true,
+                                    //buttonText: "Select date",
+                                    maxDate: Date.now.toString()
+                                });
+                                //$("#txtToDt").datepicker("setDate", Date.now.toString());
+                            });
+                        </script>
+                        <script type="text/javascript">
+                            //$(document).ready(function () {
+                            //    if (document.getElementById('ContentPlaceHolder1_rad_no2').checked) {
+                            //        $('#ContentPlaceHolder1_smartSearch_mf').val($('#ContentPlaceHolder1_Hidden2').val());
+                            //    }
+                            //    else {
+                            //        $('#ContentPlaceHolder1_smartSearch').val($('#ContentPlaceHolder1_Hidden1').val());
+                            //    }
+                            //});
+                            function fnClickHere() {
+                                window.open('Notes.htm', 'fiinotes', 'toolbar=no,location=no,menubar=no,scrollbars=yes,width=450,height=460');
+                            }
+
+                            function showalert() {
+                                var key = window.event.keyCode ? window.event.keyCode : window.event.charCode;
+                                if (key == 8) {
+                                    return false;
+                                } else {
+                                    return true;
+                                }
+                            }
+
+                            function clearText(e, ctrl) {
+                                var key = e.charCode ? e.charCode : e.keyCode;
+                                if (key == 8) {
+                                    var textDate = document.getElementById(ctrl);
+                                    textDate.value = "";
+                                }
+                            }
+                            function ClearTextBox(a) {
+                                if (a.value == a.defaultValue)
+                                    a.value = "";
+                            }
+                            function ChangeDMYVal(Text) {
+                                var varhiddmy;
+                                var varMonth;
+                                var varYear;
+                                var varYearly = document.getElementById('ContentPlaceHolder1_cmbYearly');
+                                var varFromDate = document.getElementById('ContentPlaceHolder1_txtFromDate');
+                                var varToDate = document.getElementById('ContentPlaceHolder1_txtToDate');
+                                var varhidYear = document.getElementById('ContentPlaceHolder1_hidYear');
+
+                                //var varimgFromDate = document.getElementById('imgCal');
+                                //var varimgToDate = document.getElementById('imgCal1');
+
+                                varhiddmy = document.getElementById('ContentPlaceHolder1_hidDMY');
+                                varMonth = document.getElementById('ContentPlaceHolder1_cmbMonthly');
+                                varYear = document.getElementById('ContentPlaceHolder1_cmbMYear');
+                                varhidYear.value = '';
+
+                                if (Text == 'D') {
+                                    varMonth.disabled = true;
+                                    varMonth.value = '0';
+                                    varYear.disabled = true;
+                                    varYear.value = 'YYYY';
+                                    varYearly.disabled = true;
+                                    varYearly.value = 'YYYY';
+                                    varFromDate.disabled = false;
+                                    varToDate.disabled = false;
+                                    //varimgFromDate.style.cursor = 'pointer';
+                                    //varimgToDate.style.cursor = 'pointer';
+
+                                    //if (!(varimgFromDate.onclick)) {
+                                    //    varimgFromDate.onclick = varimgFromDate._onclick;
+                                    //    varimgFromDate._onclick = null;
+                                    //}
+                                    //if (!(varimgToDate.onclick)) {
+                                    //    varimgToDate.onclick = varimgToDate._onclick;
+                                    //    varimgToDate._onclick = null;
+                                    //}
+
+                                } else if (Text == 'M') {
+                                    varMonth.disabled = false;
+                                    varYear.disabled = false;
+                                    varFromDate.disabled = true;
+                                    varFromDate.value = '';
+                                    varToDate.disabled = true;
+                                    varToDate.value = '';
+                                    //varimgFromDate.style.cursor = 'default';
+                                    //varimgToDate.style.cursor = 'default';
+                                    varYearly.disabled = true;
+                                    varYearly.value = 'YYYY';
+                                    //if (varimgFromDate.onclick) {
+                                    //    varimgFromDate._onclick = varimgFromDate.onclick;
+                                    //    varimgFromDate.onclick = null;
+                                    //}
+                                    //if (varimgToDate.onclick) {
+                                    //    varimgToDate._onclick = varimgToDate.onclick;
+                                    //    varimgToDate.onclick = null;
+                                    //}
+                                } else if (Text == "Y") {
+                                    varYearly.disabled = false;
+                                    varMonth.disabled = true;
+                                    varMonth.value = '0';
+                                    varYear.disabled = true;
+                                    varYear.value = 'YYYY';
+                                    varFromDate.disabled = true;
+                                    varFromDate.value = '';
+                                    varToDate.disabled = true;
+                                    varToDate.value = '';
+                                    //varimgFromDate.style.cursor = 'default';
+                                    //varimgToDate.style.cursor = 'default';
+
+                                    //if (varimgFromDate.onclick) {
+                                    //    varimgFromDate._onclick = varimgFromDate.onclick;
+                                    //    varimgFromDate.onclick = null;
+                                    //}
+                                    //if (varimgToDate.onclick) {
+                                    //    varimgToDate._onclick = varimgToDate.onclick;
+                                    //    varimgToDate.onclick = null;
+                                    //}
+                                }
+                                varhiddmy.value = Text;
+                                fill();
+                            }
+
+                            function onChange() {
+                                var varCmbYear = document.getElementById('ContentPlaceHolder1_cmbMYear');
+                                var varhidYear = document.getElementById('ContentPlaceHolder1_hidYear');
+                                varhidYear.value = varCmbYear.value;
+                            }
+                            function onChangeYearly() {
+                                var varCmbYear = document.getElementById('ContentPlaceHolder1_cmbYearly');
+                                var varhidYear = document.getElementById('ContentPlaceHolder1_hidYear');
+                                varhidYear.value = varCmbYear.value;
+                            }
+                            function onbtnSubmit_Click() {
+                                var errMsg = '';
+                                var strDate;
+                                var varFromDate = document.getElementById("ContentPlaceHolder1_txtFromDate");
+                                var varToDate = document.getElementById("ContentPlaceHolder1_txtToDate");
+                                var varhiddmy = document.getElementById("ContentPlaceHolder1_hidDMY");
+                                var varhdflag = document.getElementById("ContentPlaceHolder1_hdflag");
+                                var txtHidCRDate = document.getElementById("ContentPlaceHolder1_hidCurrentDate");
+
+                                var vartxtScripCD = document.getElementById('ContentPlaceHolder1_smartSearch');
+                                var vartxtScripCD3 = document.getElementById('ContentPlaceHolder1_smartSearch_TO');
+                                var vartxtScripCD1 = document.getElementById('ContentPlaceHolder1_smartSearch_mf');
+                                var vartxtScripCD2 = document.getElementById('ContentPlaceHolder1_smartSearch_Debt');
+
+                                var rad_no1 = document.getElementById('ContentPlaceHolder1_rad_no1');
+                                var rad_no2 = document.getElementById('ContentPlaceHolder1_rad_no2');
+                                var rad_no3 = document.getElementById('ContentPlaceHolder1_rad_no3');
+                                var ddlset = document.getElementById('ContentPlaceHolder1_ddlsetllementcal');
+                                var _FDate;
+
+                                if (varhdflag.value == "0") {
+
+                                    if (ddlset.value == "0") {
+                                        if (vartxtScripCD.value == '' || vartxtScripCD.value == 'Enter Security Name / Code / ID') {
+                                            alert('Please enter either Security Code or Company name.');
+                                            return false;
+                                        }
+                                    } else if (ddlset.value == "1") {
+                                        if (vartxtScripCD3.value == '' || vartxtScripCD3.value == 'Enter Security Name / Code / ID') {
+                                            alert('Please enter either Security Code or Company name.');
+                                            return false;
+                                        }
+                                    } else if (ddlset.value == "2") {
+                                        if (vartxtScripCD1.value == '' || vartxtScripCD1.value == 'Enter Security Name / Code / ID') {
+                                            alert('Please enter either Security Code or Company name.');
+                                            return false;
+                                        }
+                                    } else if (ddlset.value == "3") {
+                                        if (vartxtScripCD2.value == '' || vartxtScripCD2.value == 'Enter Security Name / Code / ID') {
+                                            alert('Please enter either Security Code or Company name.');
+                                            return false;
+                                        }
+                                    }
+                                    $('#ContentPlaceHolder1_Hidden3').val($('#ContentPlaceHolder1_smartSearch_Debt').val());
+                                    $('#ContentPlaceHolder1_Hidden2').val($('#ContentPlaceHolder1_smartSearch_mf').val());
+                                    $('#ContentPlaceHolder1_Hidden4').val($('#ContentPlaceHolder1_smartSearch_TO').val());
+                                    $('#ContentPlaceHolder1_Hidden3').val($('#ContentPlaceHolder1_smartSearch').val());
+                                }
+
+                                if (varhiddmy.value == "D") {
+                                    if (varFromDate.value == '') {
+                                        alert('Please Select From Date.');
+                                        return false;
+                                    } else {
+                                        //errMsg = date_validator(varFromDate.value);
+                                        errMsg = (varFromDate.value);
+                                        //if (errMsg != '') {
+                                        //    alert("Error Date :" + errMsg);
+                                        //    varFromDate.focus();
+                                        //    return false;
+                                        //}
+                                        //  else {
+                                        strDate = varFromDate.value.toString().split("/");
+                                        var varDate = strDate[1] + "/" + strDate[0] + "/" + strDate[2];
+                                        //  var CRDate = new Date(txtHidCRDate.value);
+                                        varDate = new Date(varDate);
+                                        _FDate = varDate;
+                                        //if (varDate > CRDate) {
+                                        //    alert('FromDate can not be greater than Current Date.');
+                                        //    varFromDate.focus();
+                                        //    return false;
+                                        //}
+                                        //  }
+                                    }
+
+                                    if (varToDate.value == '') {
+                                        alert('Please Select To Date');
+                                        return false;
+                                    } else {
+                                        //  errMsg = (varToDate.value);
+                                        ////  errMsg = date_validator(varToDate.value);
+                                        //  if (errMsg != '') {
+                                        //      alert("Error Date :" + errMsg);
+                                        //      varToDate.focus();
+                                        //      return false;
+                                        //  }
+                                        //   else {
+                                        strDate = varToDate.value.toString().split("/");
+                                        var varDate = strDate[1] + "/" + strDate[0] + "/" + strDate[2];
+                                        //    var CRDate = new Date(txtHidCRDate.value);
+                                        varDate = new Date(varDate);
+                                        //if (varDate > CRDate) {
+                                        //    alert('ToDate can not be greater than Current Date.');
+                                        //    varToDate.focus();
+                                        //    return false;
+                                        //}
+                                        if (_FDate > varDate) {
+                                            alert('From Date should be less than To Date');
+                                            varToDate.focus();
+                                            return false;
+                                        }
+                                    }
+                                }
+                                //   }
+                                else if (varhiddmy.value == "M") {
+
+                                    var varhidYear = document.getElementById('ContentPlaceHolder1_hidYear');
+                                    var varcmbMonth = document.getElementById('ContentPlaceHolder1_cmbMonthly');
+                                    var orderText = varcmbMonth.options[varcmbMonth.selectedIndex].text;
+                                    var orderValue = varcmbMonth.options[varcmbMonth.selectedIndex].value;
+
+                                    var varcmbYear = document.getElementById('ContentPlaceHolder1_cmbMYear');
+                                    var orderTextY = varcmbYear.options[varcmbYear.selectedIndex].text;
+                                    var orderValueY = varcmbYear.options[varcmbYear.selectedIndex].value;
+                                    var strDate;
+                                    if (orderText == "MMM") {
+                                        alert('Please Select Month.');
+                                        return false;
+                                    }
+                                    if (orderTextY == "YYYY") {
+                                        alert('Please Select Year.');
+                                        return false;
+                                    }
+                                    strDate = orderValue + "/" + "01" + "/" + orderValueY;
+                                    strDate = new Date(strDate);
+                                    var crDate = new Date(txtHidCRDate.value);
+                                    if (strDate > crDate) {
+                                        alert('Selected date can not be greater than Current Date.');
+                                        varcmbMonth.focus();
+                                        return false;
+                                    }
+                                } else if (varhiddmy.value == "Y") {
+                                    var varhidYear = document.getElementById("ContentPlaceHolder1_hidYear");
+                                    var varcmbyear = document.getElementById("ContentPlaceHolder1_cmbYearly");
+                                    var orderTextY = varcmbyear.options[varcmbyear.selectedIndex].text;
+                                    var orderValueY = varcmbyear.options[varcmbyear.selectedIndex].value;
+
+                                    if (orderValueY == "YYYY") {
+                                        alert('Please Select Year.');
+                                        return false;
+                                    }
+                                }
+                                return true;
+                            }
+                            function onBodyLoad() {
+                                alert(hidDMY.value);
+                                var hidDMY = document.getElementById('ContentPlaceHolder1_hidDMY');
+                                var varimgFromDate = document.getElementById('imgCal');
+                                var varimgToDate = document.getElementById('imgCal1');
+
+                                if (hidDMY.value == 'M' || hidDMY.value == 'Y') {
+                                    if (varimgFromDate.onclick) {
+                                        varimgFromDate._onclick = varimgFromDate.onclick;
+                                        varimgFromDate.onclick = null;
+                                    }
+                                    if (varimgToDate.onclick) {
+                                        varimgToDate._onclick = varimgToDate.onclick;
+                                        varimgToDate.onclick = null;
+                                    }
+                                    varimgFromDate.style.cursor = 'default';
+                                    varimgToDate.style.cursor = 'default';
+                                } else {
+                                    if (!(varimgFromDate.onclick)) {
+                                        varimgFromDate.onclick = varimgFromDate._onclick;
+                                        varimgFromDate._onclick = null;
+                                    }
+                                    if (!(varimgToDate.onclick)) {
+                                        varimgToDate.onclick = varimgToDate._onclick;
+                                        varimgToDate._onclick = null;
+                                    }
+                                    varimgFromDate.style.cursor = 'pointer';
+                                    varimgToDate.style.cursor = 'pointer';
+
+                                }
+                            }
+                            function check_ETF() {
+                                var rad_no1 = document.getElementById('ContentPlaceHolder1_rad_no1');
+                                var rad_no2 = document.getElementById('ContentPlaceHolder1_rad_no2');
+                                rad_no2.checked = true;
+                                //       var panel1 = document.getElementById('ContentPlaceHolder1_Pnl1');
+                                //       var panel2 = document.getElementById('ContentPlaceHolder1_Panel1');
+                                if (rad_no1.checked) {
+                                    document.getElementById('ContentPlaceHolder1_Pnl1').style.display = 'block';
+                                    ;document.getElementById('ContentPlaceHolder1_Panel1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_smartSearch2').value = '';
+                                } else if (rad_no2.checked) {
+                                    document.getElementById('ContentPlaceHolder1_Pnl1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel1').style.display = 'block';
+                                    document.getElementById('ContentPlaceHolder1_smartSearch_mf').value = '';
+                                }
+                            }
+                        </script>
+                        <script language="javascript" type="text/javascript">
+                            function noenter(e) {
+                                // alert("e"+e);
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 13) {
+                                    xyz();
+                                }
+                            }
+                            function chkkey(e, objtxtinput) {
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 95 || unicode == 37 || unicode == 42 || unicode == 64 || unicode == 35 || unicode == 36 || unicode == 33 || unicode == 94 || unicode == 91 || unicode == 93) {
+                                    return false;
+                                } else
+                                    return true;
+                            }
+
+                            function noenterw(e) {
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 13)
+                                    return false
+                            }
+                        </script>
+                        <script language="javascript" type="text/javascript">
+                            function noenter1(e) {
+                                // alert("e"+e);
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 13) {
+                                    xyz_mf();
+                                }
+                            }
+
+                            function noenterw1(e) {
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 13)
+                                    return false
+                            }
+
+                            function noenterw2(e) {
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 13)
+                                    return false
+                            }
+
+                            function noenterw3(e) {
+                                // alert("e"+e);
+                                var unicode = e.charCode ? e.charCode : e.keyCode
+                                if (unicode == 13) {
+                                    xyz_mf();
+                                }
+                            }
+                        </script>
+                        <script type="text/javascript" language="javascript">
+                            function check() {
+                                var ddlTO = document.getElementById('ContentPlaceHolder1_ddlsetllementcal').value;
+                                //var rad_no2 = document.getElementById('ContentPlaceHolder1_rad_no2');
+                                //var rad_no3 = document.getElementById('ContentPlaceHolder1_rad_no3');
+                                //       var panel1 = document.getElementById('ContentPlaceHolder1_Pnl1');
+                                //       var panel2 = document.getElementById('ContentPlaceHolder1_Panel1');
+                                if (ddlTO == "0") {
+                                    document.getElementById('ContentPlaceHolder1_Pnl1').style.display = 'block';
+                                    document.getElementById('ContentPlaceHolder1_Panel3').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel2').style.display = 'none';
+                                    // document.getElementById('ContentPlaceHolder1_smartSearch').value = '';
+                                } else if (ddlTO == "1") {
+                                    document.getElementById('ContentPlaceHolder1_Pnl1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel3').style.display = 'block';
+                                    document.getElementById('ContentPlaceHolder1_Panel2').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel1').style.display = 'none';
+                                    // document.getElementById('ContentPlaceHolder1_smartSearch_mf').value = '';
+                                } else if (ddlTO == "2") {
+                                    document.getElementById('ContentPlaceHolder1_Pnl1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel3').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel1').style.display = 'block';
+                                    document.getElementById('ContentPlaceHolder1_Panel2').style.display = 'none';
+                                    // document.getElementById('ContentPlaceHolder1_smartSearch_mf').value = '';
+                                } else if (ddlTO == "3") {
+                                    document.getElementById('ContentPlaceHolder1_Pnl1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel3').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel1').style.display = 'none';
+                                    document.getElementById('ContentPlaceHolder1_Panel2').style.display = 'block';
+                                    // document.getElementById('ContentPlaceHolder1_smartSearch_mf').value = '';
+                                }
+                                fill();
+                            }
+                        </script>
+                        <script type="text/javascript" language="javascript">
+                            function fill() {
+                                var scri1 = document.getElementById('ContentPlaceHolder1_hidCompanyVal').value;
+                                var scri2 = document.getElementById('ContentPlaceHolder1_hidCompanyVal').value;
+                                var scri3 = document.getElementById('ContentPlaceHolder1_hidCompanyVal').value;
+                                var scri4 = document.getElementById('ContentPlaceHolder1_hidCompanyVal').value;
+
+                                document.getElementById('ContentPlaceHolder1_smartSearch').value = scri1;
+                                document.getElementById('ContentPlaceHolder1_smartSearch_TO').value = scri4;
+                                document.getElementById('ContentPlaceHolder1_smartSearch_mf').value = scri2;
+                                document.getElementById('ContentPlaceHolder1_smartSearch_Debt').value = scri3;
+
+                            }
+                        </script>
+                        <br/>
+                        <br/>
+                        <div align="center" class="largetable">
+                            <!-- /35735749/Equity_Second -->
+                            <div id='div-gpt-ad-1586264221225-0'>
+                                <script>
+                                    googletag.cmd.push(function() {
+                                        googletag.display('div-gpt-ad-1586264221225-0');
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <div class="middlefoot"></div>
+            <footer id="footerarea" class="footerarea"></footer>
+            <script>
+                $("#footerarea").load("/footer.aspx");
+            </script>
+            <script src="/include/js/jquery.ui.touch-punch.min.js"></script>
+            <script>
+                document.write("<script type='text/javascript' src='/include/js/bootstrap.min.js?v=" + version_cntroller + "'><\/script>");
+            </script>
+            <script src="/include/js/jquery.bootstrap-responsive-tabs.min.js"></script>
+            <script>
+                $('.responsive-tabs').responsiveTabs({
+                    accordionOn: ['xs', 'sm']
+                });
+            </script>
+            <script type=text/javascript>
+                ChangeDMYVal('M'),
+                check();
+            </script>
+        </form>
+    </body>
+</html>
