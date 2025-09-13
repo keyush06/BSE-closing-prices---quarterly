@@ -121,9 +121,21 @@ scrip_code = st.text_input("BSE Scrip Code", value="500400").strip()
 from_year = st.number_input("From year", min_value=2000, max_value=pd.Timestamp.today().year, value=2024, step=1)
 
 ## New code for bse_scraper 2
-from_month = st.number_input("From month", min_value=1, max_value=12, value=1, step=1)
+# from_month_num = st.number_input(
+#     "From month (start of selectable list)", min_value=1, max_value=12, value=1, step=1,
+#     help="Pick a month number to define the first month shown in the dropdown"
+# )
+
+MONTHS = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
 # to_month = st.number_input("To month", min_value=1, max_value=12, value=12, step=1)
 # to_year = st.number_input("To year", min_value=2000, max_value=pd.Timestamp.today().year, value=2025, step=1)
+# start_idx = max(0, int(from_month_num) - 1)
+# selectable_months = MONTHS[start_idx:]  # slice from the selected start month to December
+selected_month_name = st.selectbox("Start month (pick from list)", options=MONTHS, index=0)
+from_month = MONTHS.index(selected_month_name) + 1  # Convert month name back to month number
 
 if st.button("Get Prices"):
     if not scrip_code.isdigit():
@@ -132,7 +144,7 @@ if st.button("Get Prices"):
         with st.spinner("Fetching from BSE..."):
             try:
                 # df = s._get_qtrly_dates(scrip_code, from_year=int(from_year))
-                df = s._get_monthly_table(scrip_code, from_year=int(from_year), from_month=int(from_month))
+                df = s._recurse_until_today(scrip_code, from_month=int(from_month), from_year=int(from_year))
                 df = s._get_quarterly_dates(df)
         
                 # st.write("DEBUG: returned", "shape:", getattr(df, "shape", None))

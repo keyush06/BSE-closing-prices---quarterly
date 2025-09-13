@@ -241,6 +241,51 @@ class bse_scraper_2:
         # print("[DEBUG]: original df", df)
         df_qtr = df_qtr[df_qtr["Quarter End"].astype(str).str.slice(0,3).isin(quarterly_months)]
         return df_qtr
+    
+    def _calculate_next_month_year(self, df:pd.DataFrame)->tuple:
+        """ This function will calculate the next month and year from the last entry in the dataframe"""
+        df_last = df.iloc[-1]["Quarter End"]
+        last_year = int("20"+ df_last.split()[-1])
+        last_month_str = df_last.split()[0]
+
+        print(f"[DEBUG] Last entry in the dataframe is for {last_month_str} {last_year}")
+        
+        monthly_mapping = {
+            "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,
+            "May": 5, "Jun": 6, "Jul": 7, "Aug": 8,
+            "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12
+        }
+        last_month_int = monthly_mapping.get(last_month_str, None)
+        if last_month_int is None:
+            raise ValueError(f"Could not parse month from string: {last_month_str}")
+
+        if last_month_int < 12:
+            next_month_int = last_month_int + 1
+            next_year = last_year
+        else:
+            next_month_int = 1
+            next_year = last_year + 1
+
+        return next_month_int, next_year
+    
+    def _recurse_until_today(self, script_code:int, from_month:int, from_year:int)->pd.DataFrame:
+        """ This function will keep calling _get_monthly_table until we reach current month and year"""
+        current_date = dt.date.today()
+        current_month = current_date.month
+        current_year = current_date.year
+
+        ## first itertion
+        df = self._get_monthly_table(script_code, from_month, from_year)
+
+        next_month, next_year = self._calculate_next_month_year(df)
+        while (next_year <= current_year) and (next_month <= current_month):
+            print(f"[INFO] Fetching data for {next_month:02d}/{next_year}")
+            df_next = self._get_monthly_table(script_code, next_month, next_year)
+            df = pd.concat([df, df_next], ignore_index=True)
+
+            next_month, next_year = self._calculate_next_month_year(df)
+
+        return df
 
 
 if __name__ == "__main__":
@@ -248,6 +293,9 @@ if __name__ == "__main__":
 
     """Add this functionality to_month and to_year later"""
     # df = scraper._get_monthly_table(500400, 3, 2024, 12, 2024) 
-    df = scraper._get_monthly_table(500400, 3, 2015)
+    # df = scraper._get_monthly_table(500400, 3, 2015)
+
+    """Testing iterating over upto the current month and year"""
+    df = scraper._recurse_until_today(500400, 3, 2020)
     df = scraper._get_quarterly_dates(df)
     print(df)
