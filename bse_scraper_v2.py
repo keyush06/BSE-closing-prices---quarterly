@@ -248,6 +248,6 @@ if __name__ == "__main__":
 
     """Add this functionality to_month and to_year later"""
     # df = scraper._get_monthly_table(500400, 3, 2024, 12, 2024) 
-    df = scraper._get_monthly_table(500400, 3, 2024)
+    df = scraper._get_monthly_table(500400, 3, 2015)
     df = scraper._get_quarterly_dates(df)
     print(df)
